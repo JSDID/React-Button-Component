@@ -5,6 +5,8 @@ import './App.css'
 function App() {
   const [loading, setLoading] = useState(false)
   const [disabled, setDisabled] = useState(false)
+  const [active, setActive] = useState(false)
+  const [pressed, setPressed] = useState(false)
 
   const handleClick = () => {
     console.log('Кнопка нажата!')
@@ -17,6 +19,14 @@ function App() {
 
   const toggleDisabled = () => {
     setDisabled(!disabled)
+  }
+
+  const toggleActive = () => {
+    setActive(!active)
+  }
+
+  const togglePressed = () => {
+    setPressed(!pressed)
   }
 
   return (
@@ -89,6 +99,55 @@ function App() {
           </Button>
           <Button type="reset" onClick={handleClick}>
             Кнопка сброса
+          </Button>
+        </div>
+
+        <div className="button-group">
+          <h3>Новые возможности с классами</h3>
+          
+          <Button 
+            variant="primary" 
+            fullWidth 
+            onClick={handleClick}
+            containerClassName="custom-button-container"
+          >
+            Полная ширина с кастомным классом
+          </Button>
+
+          <Button 
+            variant="secondary" 
+            rounded 
+            onClick={handleClick}
+            contentClassName="custom-content"
+          >
+            Скругленная кнопка
+          </Button>
+
+          <Button 
+            variant="outline" 
+            flat 
+            onClick={handleClick}
+            loaderClassName="custom-loader"
+          >
+            Плоская кнопка
+          </Button>
+
+          <Button 
+            variant="primary" 
+            active={active}
+            onClick={toggleActive}
+            className="my-custom-button"
+          >
+            {active ? 'Активна' : 'Неактивна'}
+          </Button>
+
+          <Button 
+            variant="secondary" 
+            pressed={pressed}
+            onClick={togglePressed}
+            containerClassName="pressed-button"
+          >
+            {pressed ? 'Нажата' : 'Не нажата'}
           </Button>
         </div>
       </div>

@@ -1,7 +1,7 @@
 .app {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 20px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
@@ -14,10 +14,8 @@
 }
 
 .button-showcase {
-  background: #f8f9fa;
-  border-radius: 16px;
-  padding: 2rem;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  display: grid;
+  gap: 40px;
 }
 
 .button-showcase h2 {
@@ -29,25 +27,61 @@
 }
 
 .button-group {
-  margin-bottom: 2.5rem;
-  padding: 1.5rem;
-  background: white;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  border: 1px solid #e0e0e0;
   border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  background: #fafafa;
 }
 
 .button-group h3 {
-  color: #495057;
-  margin-bottom: 1rem;
-  font-size: 1.2rem;
+  margin: 0 0 16px 0;
+  color: #333;
+  font-size: 18px;
   font-weight: 600;
-  border-bottom: 2px solid #e9ecef;
-  padding-bottom: 0.5rem;
 }
 
 .button-group .button {
   margin-right: 1rem;
   margin-bottom: 0.5rem;
+}
+
+/* Кастомные стили для демонстрации */
+.custom-button-container {
+  border: 2px dashed #667eea;
+  background: rgba(102, 126, 234, 0.05) !important;
+}
+
+.custom-content {
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.custom-loader {
+  border-width: 3px;
+  width: 20px;
+  height: 20px;
+}
+
+.my-custom-button {
+  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%) !important;
+  box-shadow: 0 4px 12px rgba(255, 107, 107, 0.3) !important;
+}
+
+.my-custom-button:hover:not(:disabled) {
+  background: linear-gradient(135deg, #ff5252 0%, #d63031 100%) !important;
+  box-shadow: 0 6px 20px rgba(255, 107, 107, 0.4) !important;
+}
+
+.pressed-button {
+  transition: all 0.1s ease-in-out;
+}
+
+.pressed-button:hover {
+  transform: scale(1.05);
 }
 
 /* Адаптивность */
