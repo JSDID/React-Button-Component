@@ -180,5 +180,3 @@ npm run type-check
 # Линтинг кода
 npm run lint
 ---
-
-**Создано с ❤️ для React сообщества**
